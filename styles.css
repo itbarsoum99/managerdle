@@ -23,11 +23,10 @@ h2 {
 
 body {
   margin: 0;
-  padding-bottom: 3vh;
 }
 
 main {
-  padding: 5vh 5vw;
+  padding: 5vh 5vw 8vh 5vw;
 }
 
 footer {
