@@ -66,6 +66,9 @@ footer {
     border-radius: 0px;
     color: #000;
   }
+  #question {
+    margin-bottom: 10px;
+  }
   h1 {
     font-size: 4em;
   }
