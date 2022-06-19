@@ -3,6 +3,317 @@ let answer = document.querySelector('#answer');
 let clue = document.querySelector('#clue');
 let counter = document.querySelector('#counter');
 
+let answers = [
+  {
+    "name": "Pep Guardiola",
+    "age": 50,
+    "nationality": "Spain",
+    "league": "Premier League",
+    "team": "Manchester City"
+  },
+  {
+    "name": "Jurgen Klopp",
+    "age":50,
+    "nationality": "Germany",
+    "league": "Premier League",
+    "team": "Liverpool"
+  },
+  {
+    "name": "Brendan Rodgers",
+    "age":40,
+    "nationality": "Northern Ireland",
+    "league": "Premier League",
+    "team": "Leicester City"
+  },
+  {
+    "name": "Mikel Arteta",
+    "age": 40,
+    "nationality": "Spain", 
+    "league": "Premier League",
+    "team": "Arsenal"
+  },
+  {
+    "name": "David Moyes",
+    "age": 50,
+    "nationality": "Scotland", 
+    "league": "Premier League",
+    "team": "West Ham United"
+  },
+  {
+    "name": "Thomas Tuchel",
+    "age": 40,
+    "nationality": "Germany", 
+    "league": "Premier League",
+    "team": "Chelsea"
+  },
+  {
+    "name": "Bruna Lage",
+    "age": 40,
+    "nationality": "Portugal", 
+    "league": "Premier League",
+    "team": "Wolverhampton"
+  },
+  {
+    "name": "Antonio Conte",
+    "age": 50,
+    "nationality": "Italy",
+    "league": "Premier League",
+    "team": "Tottenham"
+  },
+  {
+    "name": "Graham Potter",
+    "age":40,
+    "nationality": "England",
+    "league": "Premier League",
+    "team": "Brighton & Hove Albion"
+  },
+  {
+    "name": "Erik ten Hag",
+    "age": 50,
+    "nationality": "Netherlands",
+    "league": "Premier League",
+    "team": "Manchester United"
+  },
+  {
+    "name": "Diego Simeone",
+    "age": 50,
+    "nationality": "Argentina",
+    "league": "LaLiga",
+    "team": "Atletico Madrid"
+  },
+  {
+    "name": "Imanol Alguacil",
+    "age": 50,
+    "nationality": "Spain",
+    "league": "LaLiga",
+    "team": "Real Sociedad"
+  },
+  {
+    "name": "Julen Lopetegui",
+    "age": 50,
+    "nationality": "Spain",
+    "league": "LaLiga",
+    "team": "FC Sevilla"
+  },
+  {
+    "name": "Unai Emery",
+    "age": 50,
+    "nationality": "Spain",
+    "league": "LaLiga",
+    "team": "Villareal"
+  },
+  {
+    "name": "Manuel Pellegrini",
+    "age": 60,
+    "nationality": "Chile",
+    "league": "LaLiga",
+    "team": "Real Betis"
+  },
+  {
+    "name": "Marcelino",
+    "age": 50,
+    "nationality": "Spain",
+    "league": "LaLiga",
+    "team": "Athletic Bilbao"
+  },
+  {
+    "name": "Carlo Ancelotti",
+    "age": 60,
+    "nationality": "Italy",
+    "league": "LaLiga",
+    "team": "Real Madrid"
+  },
+  {
+    "name": "Xavi",
+    "age": 40,
+    "nationality": "Spain",
+    "league": "LaLiga",
+    "team": "FC Barcelona"
+  },
+  {
+    "name": "Gennaro Gattuso",
+    "age": 40,
+    "nationality": "Italy",
+    "league": "LaLiga",
+    "team": "FC Valencia"
+  },
+  {
+    "name": "Gian Piero Gasperini",
+    "age": 60,
+    "nationality": "Italy",
+    "league": "Serie A",
+    "team": "Atalanta Bergamo"
+  },
+  {
+    "name": "Stefano Pioli",
+    "age": 50,
+    "nationality": "Italy",
+    "league": "Serie A",
+    "team": "AC Milan"
+  },
+  {
+    "name": "Massimiliano Allegri",
+    "age": 50,
+    "nationality": "Italy",
+    "league": "Serie A",
+    "team": "Juventus"
+  },
+  {
+    "name": "Simone Inzaghi",
+    "age": 40,
+    "nationality": "Italy",
+    "league": "Serie A",
+    "team": "Inter Milan"
+  },
+  {
+    "name": "Maurizio Sarri",
+    "age": 60,
+    "nationality": "Italy",
+    "league": "Serie A",
+    "team": "SS Lazio"
+  },
+  {
+    "name": "Jose Mourinho",
+    "age": 50,
+    "nationality": "Portugal",
+    "league": "Serie A",
+    "team": "AS Roma"
+  },
+  {
+    "name": "Luciano Spalletti",
+    "age": 60,
+    "nationality": "Italy",
+    "league": "Serie A",
+    "team": "Napoli"
+  },
+  {
+    "name": "Vincenzo Italiano",
+    "age": 40,
+    "nationality": "Italy",
+    "league": "Serie A",
+    "team": "ACF Fiorentina"
+  },
+  {
+    "name": "Urs Fischer",
+    "age": 50,
+    "nationality": "Switzerland",
+    "league": "Bundesliga",
+    "team": "FC Union Berlin"
+  },
+  {
+    "name": "Sebastian Hoenes",
+    "age": 40,
+    "nationality": "Germany",
+    "league": "Bundesliga",
+    "team": "TSG Hoffenheim"
+  },
+  {
+    "name": "Bo Svensson",
+    "age": 40,
+    "nationality": "Denmark",
+    "league": "Bundesliga",
+    "team": "FSV Mainz"
+  },
+  {
+    "name": "Steffen Baumgart",
+    "age": 50,
+    "nationality": "Germany",
+    "league": "Bundesliga",
+    "team": "FC Koln"
+  },
+  {
+    "name": "Gerardo Seoane",
+    "age": 40,
+    "nationality": "Switzerland",
+    "league": "Bundesliga",
+    "team": "Bayer Leverkusen"
+  },
+  {
+    "name": "Adi Hutter",
+    "age": 50,
+    "nationality": "Austria",
+    "league": "Bundesliga",
+    "team": "Borussia Monchengladbach"
+  },
+  {
+    "name": "Julian Nagelsmann",
+    "age": 30,
+    "nationality": "Germany",
+    "league": "Bundesliga",
+    "team": "Bayern Munchen"
+  },
+  {
+    "name": "Domenico Tedesco",
+    "age": 30,
+    "nationality": "Italy",
+    "league": "Bundesliga",
+    "team": "RB Leipzig"
+  },
+  {
+    "name": "Edin Terzic",
+    "age": 30,
+    "nationality": "Germany",
+    "league": "Bundesliga",
+    "team": "Borussia Dortmund"
+  },
+  {
+    "name": "Franck Haise",
+    "age": 50,
+    "nationality": "France",
+    "league": "Ligue 1",
+    "team": "RC Lens"
+  },
+  {
+    "name": "Mauricio Pochettino",
+    "age": 50,
+    "nationality": "Argentina",
+    "league": "Ligue 1",
+    "team": "Paris Saint-Germain"
+  },
+  {
+    "name": "Jorge Sampaoli",
+    "age": 60,
+    "nationality": "Argentina",
+    "league": "Ligue 1",
+    "team": "Olympique Marseille"
+  },
+  {
+    "name": "Peter Bosz",
+    "age": 50,
+    "nationality": "Netherlands",
+    "league": "Ligue 1",
+    "team": "Olympique Lyon"
+  },
+  {
+    "name": "Christophe Gaitier",
+    "age": 50,
+    "nationality": "France",
+    "league": "Ligue 1",
+    "team": "OGC Nice"
+  },
+  {
+    "name": "Philippe Clement",
+    "age": 40,
+    "nationality": "Belgium",
+    "league": "Ligue 1",
+    "team": "AS Monaco"
+  },
+  {
+    "name": "Bruno Genesio",
+    "age": 50,
+    "nationality": "France",
+    "league": "Ligue 1",
+    "team": "Stade Rennes"
+  },
+  {
+    "name": "Julien Stephan",
+    "age": 40,
+    "nationality": "France",
+    "league": "Ligue 1",
+    "team": "RC Strasbourg Alsace"
+  }
+]
+
 let managers = [
   {
     "name": "Pep Guardiola",
@@ -425,18 +736,18 @@ let managers = [
     "team": "Hellas Verona"
   },
   {
-    "name": "Gabriele Cioffi",
-    "age": 40,
-    "nationality": "Italy",
-    "league": "Serie A",
-    "team": "Hellas Verona"
-  },
-  {
     "name": "Christian Streich",
     "age": 50,
     "nationality": "Germany",
     "league": "Bundesliga",
     "team": "SC Freiburg"
+  },
+  {
+    "name": "Edin Terzic",
+    "age": 30,
+    "nationality": "Germany",
+    "league": "Bundesliga",
+    "team": "Borussia Dortmund"
   },
   {
     "name": "Urs Fischer",
@@ -679,7 +990,7 @@ let managers = [
 
 ]
 
-let manager = managers[Math.floor(Math.random()*managers.length)]
+let manager = answers[Math.floor(Math.random()*managers.length)]
 
 qinput.placeholder = "Enter a manager..."
 
