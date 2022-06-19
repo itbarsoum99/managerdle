@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap');
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+font-weight: 200;
+font-size: 2em;
+}
+
+h2 {
+  font-weight: 200;
+  font-size: 1.4em;
+}
+
+#clue{
+  background-color: #ffff0085;
+  width: fit-content;
+  display: inline;
+
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  padding: 5vh 5vw;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+  padding: 1vh 0vw;
+  width: 100vw;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+  <title>managerdle</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+<body>
+<main>
+  <h2>you thought you knew football managers.</h2>
+  <h1>you thought wrong.</h1>
+  <p>welcome to <u>managerdle</u>!</p>
+  <p>enter a manager from one of the five major European top-flight leagues in the box below (LaLiga, Bundesliga, Serie A, Ligue 1, Premier League). all accents in names have been removed for the convenience of typing. irreplacable characters (such as ß) have been replaced by their phonetic equivalents (ß = s). each time you load this page, a new game is generated randomly. good luck!</p>
+  <p id="clue"></p>
+  <p id="hint"></p>
+  <p id="team"></p>
+    <input type="text" id="question" name="question" required>
+    <input type="button" id="theButton" value="Guess"/>
+  <p id="answer"></p>
+  <p id="counter"></p>
+  <button onclick="giveHint()">Get a hint</button>
+  <button onclick="giveTeam()">Get team</button>
+  <button onclick="giveUp()">Give up</button>
+  <script src="main.js"></script>
+  </main>
+  <footer class="foot">
+    <p>made with 💛 by isaac barsoum</p>
+  </footer>
+</body>
+
+</html>
