@@ -691,8 +691,9 @@ counter.innerHTML = count + " guesses"
 
 
 document.getElementById("theButton").onclick = function(){ 
-  count++;
   var x = qinput.value;
+  if (x != "") {
+  count++;
   console.log(x)
   if (x.toLowerCase() === manager.name.toLowerCase()) {
     answer.innerHTML = "Congratulations! The solution was " + manager.name + ". You got it in " + count + " guesses."
@@ -707,7 +708,7 @@ document.getElementById("theButton").onclick = function(){
     }
   }
   if (!test) {
-    answer.innerHTML = "I don't know that manager. Guess does not count.";
+    answer.innerHTML += "I don't know that manager. Guess does not count. (" + x + ")<br/>";
     count--;
   }
   if (test && managers[pos].league === manager.league) {
@@ -716,6 +717,7 @@ document.getElementById("theButton").onclick = function(){
     answer.innerHTML += "Incorrect. ("+x+")<br/>"
   }
 
+  }
   }
   counter.innerHTML = count + " guesses" 
   qinput.value = "";
