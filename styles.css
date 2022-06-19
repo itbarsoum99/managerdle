@@ -62,7 +62,7 @@ footer {
 
 @media (pointer: coarse) {
   button, input {
-    font-size: 3em;
+    font-size: 2.4em;
     border-radius: 0px;
     color: #000;
   }
