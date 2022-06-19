@@ -697,8 +697,7 @@ document.getElementById("theButton").onclick = function(){
   if (x.toLowerCase() === manager.name.toLowerCase()) {
     answer.innerHTML = "Congratulations! The solution was " + manager.name + ". You got it in " + count + " guesses."
   } else {
-    answer.innerHTML = "Incorrect."
-  let test = false;
+     let test = false;
   let pos = -1;
   for (let i = 0; i < managers.length; i++) {
     if (managers[i].name.toLowerCase() === x.toLowerCase()) {
@@ -712,19 +711,22 @@ document.getElementById("theButton").onclick = function(){
     count--;
   }
   if (test && managers[pos].league === manager.league) {
-    answer.innerHTML = "Incorrect. The correct manager coaches in the same league as " + x;
+    answer.innerHTML += "Incorrect. The correct manager coaches in the same league as " + x +".<br/>";
+  } else if (test) {
+    answer.innerHTML += "Incorrect. ("+x+")<br/>"
   }
+
   }
   counter.innerHTML = count + " guesses" 
   qinput.value = "";
 }
 
 function giveHint() {
-  document.getElementById("hint").innerHTML = "The correct manager coaches in " + manager.league;
+  document.getElementById("hint").innerHTML = "The correct manager coaches in " + manager.league +".";
 }
 
 function giveTeam() {
-  document.getElementById("team").innerHTML = "The correct manage coaches for " + manager.team + " in " + manager.league;
+  document.getElementById("team").innerHTML = "The correct manage coaches for " + manager.team + " in " + manager.league +".";
 }
 
 function giveUp() {
