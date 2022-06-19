@@ -47,7 +47,7 @@ let answers = [
     "team": "Chelsea"
   },
   {
-    "name": "Bruna Lage",
+    "name": "Bruno Lage",
     "age": 40,
     "nationality": "Portugal", 
     "league": "Premier League",
@@ -205,7 +205,7 @@ let answers = [
     "age": 40,
     "nationality": "Germany",
     "league": "Bundesliga",
-    "team": "TSG Hoffenheim"
+    "team": "TSG 1899 Hoffenheim"
   },
   {
     "name": "Bo Svensson",
@@ -285,7 +285,7 @@ let answers = [
     "team": "Olympique Lyon"
   },
   {
-    "name": "Christophe Gaitier",
+    "name": "Christophe Galtier",
     "age": 50,
     "nationality": "France",
     "league": "Ligue 1",
@@ -1039,7 +1039,7 @@ function giveHint() {
 }
 
 function giveTeam() {
-  document.getElementById("team").innerHTML = "The correct manage coaches for " + manager.team + " in " + manager.league +".";
+  document.getElementById("team").innerHTML = "The correct manager coaches for " + manager.team + " in " + manager.league +".";
 }
 
 function giveUp() {
